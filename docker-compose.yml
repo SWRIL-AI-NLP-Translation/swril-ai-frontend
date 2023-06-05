@@ -2,6 +2,6 @@ version: '3'
 services:
     frontend:
         build: '.'
-        image: 'swril/ai-frontend:0.1.0'
+        image: 'swril/ai-frontend:0.0.1'
         ports:
             - '8081:8081'

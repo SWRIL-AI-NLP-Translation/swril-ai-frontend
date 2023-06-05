@@ -22,6 +22,6 @@ jobs:
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build the Docker images
-        run: docker compose build compass
+        run: docker compose build
       - name: Docker push
-        run: docker compose push compass
+        run: docker compose push
