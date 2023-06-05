@@ -1,0 +1,13 @@
+@mixin message {
+    p {
+        box-shadow: 0 0.4rem 0.5rem rgba(0,0,0,0.2);
+        padding: 0.5rem 1rem;
+    }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    max-width: 19rem;
+    word-wrap: break-word;
+    justify-content: flex-start;
+}
