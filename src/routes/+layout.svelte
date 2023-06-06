@@ -1,10 +1,12 @@
 <script lang="ts">
 	import Nav from '$lib/components/nav/Nav.svelte';
+	import type { AccountData } from '$lib/types/account';
+	export let data: AccountData;
 </script>
 
 <section id="pageContainer">
 	<main>
-		<Nav/>
+		<Nav user={data.user}/>
 		<slot />
 	</main>
 </section>

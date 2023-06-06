@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { COLORS } from '$lib/styles/colors';
-	import { graphql } from '$lib/data/graphql';
 	import Icon from '$lib/components/icons/icon.svelte';
 	import { goto } from '$app/navigation';
-
 	
 </script>
 

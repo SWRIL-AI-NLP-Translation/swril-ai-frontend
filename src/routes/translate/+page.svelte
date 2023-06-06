@@ -3,7 +3,6 @@
 	import { COLORS } from '$lib/styles/colors';
 	import Swap from '$lib/components/icons/swap.svelte';
 	import Upload from '$lib/components/icons/upload.svelte';
-	import { graphql } from '$lib/data/graphql';
 	import { getTranslation, saveTranslation } from '$lib/data/api/translate'
 	import { languages } from '$lib/types/languages';
 	import type { AccountData } from '$lib/types/account';
@@ -11,7 +10,6 @@
 	import SavedTranslationGrid from '$lib/components/SavedTranslationGrid.svelte';
 	import { savedText } from '$lib/data/stores';
 	import { onMount } from 'svelte';
-	// import micPhone from '$lib/images/mic.svg';
 	export let data: AccountData;
 
 	let fromLanguage = 'English';

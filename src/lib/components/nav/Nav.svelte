@@ -4,6 +4,9 @@
 
 	import { goto } from "$app/navigation";
 	import { COLORS } from "$lib/styles/colors";
+	import type { UserType } from '$lib/types/user';
+
+	export let user: UserType | undefined;
 	
 </script>
 
@@ -20,7 +23,7 @@
 		</NavItem>
 	</nav>
 	
-	<SettingsMenu/>
+	<SettingsMenu user={user}/>
 </header>
 
 <style lang="scss">

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import compassLogo from '$lib/images/compassLogo.png';
 	import { goto } from '$app/navigation';
 </script>
 

@@ -3,8 +3,6 @@ import { error } from '@sveltejs/kit';
 import { defaultAccountData, type AccountData } from '$lib/types/account';
 import type { ServerLoadParams } from '$lib/types/serverLoad';
 
-
-
 export const load = async ({ parent }: ServerLoadParams): Promise<AccountData> =>  {
 	try {
 		const { token } = await parent();

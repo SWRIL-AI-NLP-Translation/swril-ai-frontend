@@ -2,7 +2,6 @@
 	import { goto } from "$app/navigation";
 	import { savedText } from "$lib/data/stores";
 	import type { UserFile } from "$lib/types/userFile";
-	import { getContext, setContext } from "svelte";
 	
 	export let document:UserFile;
 

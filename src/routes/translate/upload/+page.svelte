@@ -1,16 +1,14 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-
 	import { uploadFile } from '$lib/data/api/file';
 	import type { AccountData } from '$lib/types/account';
+	
 	let file: File|null = null;
 	export let data: AccountData;
 	onMount(() => {
 		if (!data?.user || !data.token ) goto("/login")
 	});
-
-	
 
 	const fileChange = (e: Event) => {
 		let target:any = e.target ?? null;
