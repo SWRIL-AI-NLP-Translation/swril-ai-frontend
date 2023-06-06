@@ -11,7 +11,7 @@ export class DataError {
 	}
 }
 
-export type DataResponseType<T> = {
+export type DataResponseType<T=null> = {
 	success: false;
 	data?: undefined;
 	error: DataError;

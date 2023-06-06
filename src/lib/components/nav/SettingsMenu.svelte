@@ -2,7 +2,7 @@
 	import { goto } from "$app/navigation";
 	import { COLORS } from "$lib/styles/colors";
 	import type { UserType } from "$lib/types/user";
-	import Icon from "../icons/Icon.svelte";
+	import Icon from "../icons/icon.svelte";
 	
 	export let user:UserType|undefined;
 

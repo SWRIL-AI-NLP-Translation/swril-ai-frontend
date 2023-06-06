@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { COLORS } from '$lib/styles/colors';
 	import type { AccountData } from '$lib/types/account';
-	import Icon from '$lib/components/icons/Icon.svelte';
+	import Icon from '$lib/components/icons/icon.svelte';
 	import { Cookies } from '$lib/utils/cookies';
 	export let data: AccountData;
 	if (!data?.user) {
@@ -17,22 +17,22 @@
 	const links = [{
 		icon: 'edit',
 		name: 'Edit Account',
-		link: '/edit'
+		link: '/translate/edit'
 	},
 	{
 		icon: 'star',
 		name: 'Saved translations',
-		link: '/saved'
+		link: '/translate/saved'
 	},
 		{
 		icon: 'star',
 		name: 'Saved Documents',
-		link: '/documents'
+		link: '/translate/documents'
 	},
 	{
 		icon: 'help',
-		name: 'About website',
-		link: '/about'
+		name: 'About Translate',
+		link: '/translate/about'
 	}
 ]
 	

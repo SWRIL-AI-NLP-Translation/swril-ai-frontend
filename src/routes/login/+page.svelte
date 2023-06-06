@@ -1,17 +1,21 @@
 <script lang="ts">
-	import { COLORS } from '$lib/styles/colors';
-	import { graphql } from '$lib/data/graphql';
-	import Icon from '$lib/components/icons/Icon.svelte';
+	import Icon from '$lib/components/icons/icon.svelte';
 	import { login } from '$lib/data/api/account';
 	import { Cookies } from '$lib/utils/cookies';
-	import { goto } from '$app/navigation';
 
 	let submitEnabled = true;
 
 
 	let tryLogin = async () => {
 		submitEnabled = false;
-		await login()
+		const res = await login()
+		if (res.error) {
+			alert(res.error.message);
+		} else {
+			alert("Logged in!")
+			Cookies.set('token', res.data)
+			window.location.href = '/'
+		}
 		submitEnabled = true;
 	}
 </script>

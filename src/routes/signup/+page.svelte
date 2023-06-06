@@ -1,16 +1,19 @@
 <script lang="ts">
-	import { COLORS } from '$lib/styles/colors';
-	import { graphql } from '$lib/data/graphql';
-	import Icon from '$lib/components/icons/Icon.svelte';
 	import { createAccount } from '$lib/data/api/account';
-	import { goto } from '$app/navigation';
 	import { Cookies } from '$lib/utils/cookies';
 
 	let submitEnabled = true;
 
 	let tryCreateAccount = async () => {
 		submitEnabled = false;
-		await createAccount();
+		const res = await createAccount();
+		if (res.error) {
+			alert(res.error.message);
+		} else {
+			alert('Account created successfully');
+			Cookies.set('token', res.data);
+			window.location.href = '/';
+		}
 		submitEnabled = true;
 	}
 </script>

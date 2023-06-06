@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { COLORS } from '$lib/styles/colors';
-	import { graphql } from '$lib/data/graphql';
-	import Icon from '$lib/components/icons/Icon.svelte';
+	import Icon from '$lib/components/icons/icon.svelte';
 	import { goto } from '$app/navigation';
-	import { Cookies } from '$lib/utils/cookies';
 	import { updateAccount } from '$lib/data/api/account';
 	import type { AccountData } from '$lib/types/account';
 
@@ -16,7 +14,13 @@
 
 	let tryUpdateAccount = async () => {
 		submitEnabled = false;
-		await updateAccount();
+		const res = await updateAccount();
+		if (res.error) {
+			alert(res.error.message);
+		} else {
+			alert("Account updated successfully")
+			goto('/settings')
+		}
 		submitEnabled = true;
 	}
 </script>

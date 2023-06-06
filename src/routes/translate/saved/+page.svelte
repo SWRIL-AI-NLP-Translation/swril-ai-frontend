@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { COLORS } from '$lib/styles/colors';
-	import Icon from '$lib/components/icons/Icon.svelte';
+	import Icon from '$lib/components/icons/icon.svelte';
 	import { goto } from '$app/navigation';
 	import type { AccountData } from '$lib/types/account';
 	import SavedTranslationGrid from '$lib/components/SavedTranslationGrid.svelte';

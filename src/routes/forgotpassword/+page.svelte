@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { COLORS } from '$lib/styles/colors';
 	import { graphql } from '$lib/data/graphql';
-	import Icon from '$lib/components/icons/Icon.svelte';
+	import Icon from '$lib/components/icons/icon.svelte';
 </script>
 
 <article>

@@ -7,7 +7,7 @@
 	import { getTranslation, saveTranslation } from '$lib/data/api/translate'
 	import { languages } from '$lib/types/languages';
 	import type { AccountData } from '$lib/types/account';
-	import Icon from '$lib/components/icons/Icon.svelte';
+	import Icon from '$lib/components/icons/icon.svelte';
 	import SavedTranslationGrid from '$lib/components/SavedTranslationGrid.svelte';
 	import { savedText } from '$lib/data/stores';
 	import { onMount } from 'svelte';

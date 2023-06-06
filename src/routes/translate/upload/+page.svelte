@@ -22,7 +22,7 @@
 		if (!file) return alert("File not found")
 		const res = await uploadFile(file, data.token??'') as {filename: string};
 		alert("Saved " + res.filename)
-		goto('/documents')
+		goto('/translate/documents')
 	}
 </script>
 
