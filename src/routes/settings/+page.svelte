@@ -6,50 +6,54 @@
 	import { Cookies } from '$lib/utils/cookies';
 	export let data: AccountData;
 	if (!data?.user) {
-		goto("login")
+		goto('login');
 	}
 
 	const logout = () => {
-		Cookies.delete('token')
-		goto("login")
-	}
+		Cookies.delete('token');
+		goto('login');
+	};
 
-	const links = [{
-		icon: 'edit',
-		name: 'Edit Account',
-		link: '/translate/edit'
-	},
-	{
-		icon: 'star',
-		name: 'Saved translations',
-		link: '/translate/saved'
-	},
+	const links = [
 		{
-		icon: 'star',
-		name: 'Saved Documents',
-		link: '/translate/documents'
-	},
-	{
-		icon: 'help',
-		name: 'About Translate',
-		link: '/translate/about'
-	}
-]
-	
+			icon: 'edit',
+			name: 'Edit Account',
+			link: '/translate/edit'
+		},
+		{
+			icon: 'star',
+			name: 'Saved translations',
+			link: '/translate/saved'
+		},
+		{
+			icon: 'star',
+			name: 'Saved Documents',
+			link: '/translate/documents'
+		},
+		{
+			icon: 'help',
+			name: 'About Translate',
+			link: '/translate/about'
+		}
+	];
 </script>
 
 <article>
 	<header>
-		<button on:click={() => {goto('/')}}>
-			<Icon icon={'leftArrow'} color={COLORS.swr_dark_grey} height='1.5rem' width='1.5rem'/>
+		<button
+			on:click={() => {
+				goto('/');
+			}}
+		>
+			<Icon icon={'leftArrow'} color={COLORS.swr_dark_grey} height="1.5rem" width="1.5rem" />
 		</button>
 		<h1>Settings</h1>
 	</header>
-	<section class='info'>
+	<section class="info">
 		<div>
 			<h3>{data?.user?.first_name} {data?.user?.last_name}</h3>
 			<button on:click={logout}>
-				<Icon icon="logout" color={COLORS.swr_light_grey} height='1.8rem' width='1.8rem'/>
+				<Icon icon="logout" color={COLORS.swr_light_grey} height="1.8rem" width="1.8rem" />
 			</button>
 		</div>
 		<p>Your account</p>
@@ -57,7 +61,7 @@
 	<section class="links">
 		{#each links as link}
 			<a href={link.link}>
-				<Icon icon={link.icon} color={COLORS.swr_light_grey} height='1.8rem' width='1.8rem'/>
+				<Icon icon={link.icon} color={COLORS.swr_light_grey} height="1.8rem" width="1.8rem" />
 				<h3>{link.name}</h3>
 			</a>
 		{/each}
@@ -74,7 +78,7 @@
 		box-sizing: border-box;
 		width: 100%;
 		header {
-			display:flex;
+			display: flex;
 			justify-content: flex-start;
 			background-color: color('swr_secondary');
 			align-items: center;

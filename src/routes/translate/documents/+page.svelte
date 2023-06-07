@@ -7,21 +7,24 @@
 
 	export let data: AccountData;
 	if (!data?.user) {
-		goto("login")
+		goto('login');
 	}
-
 </script>
 
 <article>
 	<header>
-		<button on:click={() => {goto('/settings')}}>
-			<Icon icon={'leftArrow'} color={COLORS.swr_dark_grey} height='1.5rem' width='1.5rem'/>
+		<button
+			on:click={() => {
+				goto('/settings');
+			}}
+		>
+			<Icon icon={'leftArrow'} color={COLORS.swr_dark_grey} height="1.5rem" width="1.5rem" />
 		</button>
 		<h1>Saved Documents</h1>
 	</header>
 	<h3>All your saved documents</h3>
 	{#if data.user}
-		<SavedDocumentsGrid documents={data.user.files??[]}/>
+		<SavedDocumentsGrid documents={data.user.files ?? []} />
 	{/if}
 </article>
 
@@ -34,7 +37,7 @@
 		max-width: 25rem;
 		width: 100%;
 		header {
-			display:flex;
+			display: flex;
 			justify-content: flex-start;
 			background-color: color('swr_secondary');
 			align-items: center;

@@ -15,7 +15,7 @@
 			window.location.href = '/';
 		}
 		submitEnabled = true;
-	}
+	};
 </script>
 
 <article>
@@ -27,20 +27,25 @@
 	</section>
 	<section class="form">
 		<label for="firstName">First Name</label>
-		<input type="text" name="firstName" id="firstNameInput" placeholder="First Name"/>
+		<input type="text" name="firstName" id="firstNameInput" placeholder="First Name" />
 		<label for="lastName">Last Name</label>
-		<input type="text" name="lastName" id="lastNameInput" placeholder="Last Name"/>
+		<input type="text" name="lastName" id="lastNameInput" placeholder="Last Name" />
 		<label for="email">Email</label>
-		<input type="text" name="email" id="emailInput" placeholder="Email address"/>
+		<input type="text" name="email" id="emailInput" placeholder="Email address" />
 		<label for="password">Password</label>
-		<input type="password" name="password" id="passwordInput" placeholder="Password"/>
+		<input type="password" name="password" id="passwordInput" placeholder="Password" />
 		<label for="confirmPassword">Confirm Password</label>
-		<input type="password" name="confirmPassword" id="confirmPasswordInput" placeholder="Password"/>
-		<button on:click={submitEnabled?tryCreateAccount:null}>
+		<input
+			type="password"
+			name="confirmPassword"
+			id="confirmPasswordInput"
+			placeholder="Password"
+		/>
+		<button on:click={submitEnabled ? tryCreateAccount : null}>
 			<p>Create Account</p>
 		</button>
 	</section>
-	<hr>
+	<hr />
 	<section class="signup">
 		<p>Don't have an account? <a href="/login">Login</a></p>
 	</section>
@@ -100,7 +105,7 @@
 				font-size: 1rem;
 				font-weight: 500;
 				background-color: white;
-			}	
+			}
 			a {
 				color: color('swr_blue');
 			}

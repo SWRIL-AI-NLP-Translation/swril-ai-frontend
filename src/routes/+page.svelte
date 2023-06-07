@@ -6,32 +6,31 @@
 	<header>
 		<h1>Smart Waterloo Region AI and NLP Prototypes</h1>
 	</header>
-	<button on:click={() => goto("/translate")}>
+	<button on:click={() => goto('/translate')}>
 		<!-- TODO: Fix this formatting + use icon -->
-		<p></p> 
+		<p />
 		<p>Translation</p>
-		<p>{">"}</p>
+		<p>{'>'}</p>
 	</button>
-	<button on:click={() => goto("/chatbot")}>
+	<button on:click={() => goto('/chatbot')}>
 		<!-- TODO: Fix this formatting + use icon -->
-		<p></p> 
+		<p />
 		<p>Chatbot</p>
-		<p>{">"}</p>
+		<p>{'>'}</p>
 	</button>
-	<button on:click={() => goto("/admin")}>
+	<button on:click={() => goto('/admin')}>
 		<!-- TODO: Fix this formatting + use icon -->
-		<p></p> 
+		<p />
 		<p>Admin</p>
-		<p>{">"}</p>
+		<p>{'>'}</p>
 	</button>
-	
 </article>
 
 <style lang="scss">
 	button {
 		@include button;
 		width: 60%;
-    	padding: 0.3rem 1rem;
+		padding: 0.3rem 1rem;
 	}
 	article {
 		img {

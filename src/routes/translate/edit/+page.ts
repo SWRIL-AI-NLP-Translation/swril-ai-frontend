@@ -1,2 +1,2 @@
-import { loadAccount } from '$lib/data/api/account';
+import { loadAccount } from '$lib/data/api/account'
 export const load = loadAccount

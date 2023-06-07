@@ -5,40 +5,39 @@
 
 	let submitEnabled = true;
 
-
 	let tryLogin = async () => {
 		submitEnabled = false;
-		const res = await login()
+		const res = await login();
 		if (res.error) {
 			alert(res.error.message);
 		} else {
-			alert("Logged in!")
-			Cookies.set('token', res.data)
-			window.location.href = '/'
+			alert('Logged in!');
+			Cookies.set('token', res.data);
+			window.location.href = '/';
 		}
 		submitEnabled = true;
-	}
+	};
 </script>
 
 <article>
 	<section class="intro">
 		<div class="introHeader">
 			<h3>Login</h3>
-			<Icon height={'2rem'} width={'2rem'} icon={'account'}/>
+			<Icon height={'2rem'} width={'2rem'} icon={'account'} />
 		</div>
 		<p>Hello, welcome back to your account!</p>
 	</section>
 	<section class="form">
 		<label for="email">Email</label>
-		<input type="text" id="emailInput" name="email" placeholder="Email address"/>
+		<input type="text" id="emailInput" name="email" placeholder="Email address" />
 		<label for="password">Password</label>
-		<input type="password" id="passwordInput" name="password" placeholder="Password"/>
+		<input type="password" id="passwordInput" name="password" placeholder="Password" />
 		<a href="/forgotpassword">Forgot Password?</a>
-		<button on:click={submitEnabled?tryLogin:null}>
+		<button on:click={submitEnabled ? tryLogin : null}>
 			<p>Login</p>
 		</button>
 	</section>
-	<hr>
+	<hr />
 	<section class="signup">
 		<p>Don't have an account? <a href="/signup">Sign up</a></p>
 	</section>
@@ -98,7 +97,7 @@
 				font-size: 1rem;
 				font-weight: 500;
 				background-color: white;
-			}	
+			}
 			a {
 				color: color('swr_blue');
 			}

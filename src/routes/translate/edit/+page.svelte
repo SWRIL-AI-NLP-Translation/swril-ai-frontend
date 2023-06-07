@@ -9,7 +9,7 @@
 
 	export let data: AccountData;
 	if (!data?.user) {
-		goto("login")
+		goto('login');
 	}
 
 	let tryUpdateAccount = async () => {
@@ -18,17 +18,21 @@
 		if (res.error) {
 			alert(res.error.message);
 		} else {
-			alert("Account updated successfully")
-			goto('/settings')
+			alert('Account updated successfully');
+			goto('/settings');
 		}
 		submitEnabled = true;
-	}
+	};
 </script>
 
 <article>
 	<header>
-		<button on:click={() => {goto('/settings')}}>
-			<Icon icon={'leftArrow'} color={COLORS.swr_dark_grey} height='1.5rem' width='1.5rem'/>
+		<button
+			on:click={() => {
+				goto('/settings');
+			}}
+		>
+			<Icon icon={'leftArrow'} color={COLORS.swr_dark_grey} height="1.5rem" width="1.5rem" />
 		</button>
 		<h1>Edit account</h1>
 	</header>
@@ -40,12 +44,22 @@
 	</section> -->
 	<section class="form">
 		<label for="firstName">First Name</label>
-		<input value={data?.user?.first_name} type="text" name="firstName" id="firstNameInput" placeholder="First Name"/>
+		<input
+			value={data?.user?.first_name}
+			type="text"
+			name="firstName"
+			id="firstNameInput"
+			placeholder="First Name"
+		/>
 		<label for="lastName">Last Name</label>
-		<input value={data?.user?.last_name} type="text" name="lastName" id="lastNameInput" placeholder="Last Name"/>
-		<button on:click={submitEnabled?tryUpdateAccount:null}>
-			Update Account
-		</button>
+		<input
+			value={data?.user?.last_name}
+			type="text"
+			name="lastName"
+			id="lastNameInput"
+			placeholder="Last Name"
+		/>
+		<button on:click={submitEnabled ? tryUpdateAccount : null}> Update Account </button>
 	</section>
 </article>
 
@@ -58,7 +72,7 @@
 		max-width: 25rem;
 		width: 100%;
 		header {
-			display:flex;
+			display: flex;
 			justify-content: flex-start;
 			background-color: color('swr_secondary');
 			align-items: center;
@@ -116,7 +130,7 @@
 				font-size: 1rem;
 				font-weight: 500;
 				background-color: white;
-			}	
+			}
 			a {
 				color: color('swr_blue');
 			}
