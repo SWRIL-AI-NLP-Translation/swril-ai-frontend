@@ -1,5 +1,12 @@
 # Changelog for swril-ai-frontend
 
+## [0.1.1] - 2023-06-06
+Added linting rules in .eslintrc.js
+### Updates:
+- Updated eslint
+- Fixed some linting and formatting errors
+### Contributors
+- Zac Waite
 
 ## [0.1.0] - 2023-06-06
 Initial changelog version
