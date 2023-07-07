@@ -13,16 +13,6 @@ $colors: (
 	swr_green: #98C455
 );
 
-// $colors: (
-// 	primary: #E16A5D,
-// 	secondary: #F3F0E7,
-// 	background: #F2F2F2,
-// 	font: #454545,
-// 	_darkGrey: #9C9C9C,
-// 	lightGrey: #BBBBBB,
-
-// );
-
 @function color($key) {
 	@if not map-has-key($colors, $key) {
 		@warn "Color `#{$key}` not found.";
@@ -63,7 +53,6 @@ $colors: (
 	padding: 0;
 	font-family: 'Noto Sans';
 	color: color('swr_font');
-	text-decoration: none;
 
 	// for layout debugging:
 	// background: rgba(0, 100, 0, 0.1) !important;
