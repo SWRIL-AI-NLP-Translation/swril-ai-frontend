@@ -1,5 +1,12 @@
 # Changelog for swril-ai-frontend
 
+## [0.1.3] - 2023-07-07
+Remove global styles causing chatbot issues
+### Updates:
+- Remove global styles causing chatbot issues
+### Contributors
+- Zac Waite
+
 ## [0.1.2] - 2023-06-12
 Update favicon
 ### Updates:
